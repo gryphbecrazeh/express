@@ -1,6 +1,5 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
 
 //Define Routes
 // Enter in the variable name that will hold the exported data from an external js file
@@ -12,9 +11,7 @@ const users = require("./routes/api/users");
 const app = express();
 
 // ----------------------------------------------Begin Middleware---------------------------------------------------
-// How Middleware works
-// Bodyparser Middleware
-app.use(bodyParser.json());
+app.use(express.json());
 // -----------------------------------------------------------------------------------------------------------------
 
 // DB Config
